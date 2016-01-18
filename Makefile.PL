@@ -2,21 +2,32 @@
 use strict;
 use warnings;
 
-use 5.014000;
+use 5.010001;
 
 use ExtUtils::MakeMaker;
 
 my %WriteMakefileArgs = (
-  "ABSTRACT" => "Short intro",
+  "ABSTRACT" => "Code coverage plugin for Badge::Depot",
   "AUTHOR" => "Erik Carlsson <info\@code301.com>",
   "CONFIGURE_REQUIRES" => {
     "ExtUtils::MakeMaker" => 0
   },
   "DISTNAME" => "Badge-Depot-Plugin-Coverage",
   "LICENSE" => "perl",
-  "MIN_PERL_VERSION" => "5.014000",
+  "MIN_PERL_VERSION" => "5.010001",
   "NAME" => "Badge::Depot::Plugin::Coverage",
-  "PREREQ_PM" => {},
+  "PREREQ_PM" => {
+    "Badge::Depot" => 0,
+    "DateTime" => 0,
+    "DateTime::Format::RFC3339" => 0,
+    "JSON::MaybeXS" => 0,
+    "Moose" => 0,
+    "MooseX::AttributeShortcuts" => 0,
+    "Path::Tiny" => 0,
+    "Types::Standard" => 0,
+    "Types::URI" => 0,
+    "namespace::autoclean" => 0
+  },
   "TEST_REQUIRES" => {
     "ExtUtils::MakeMaker" => 0,
     "File::Spec" => 0,
@@ -30,9 +41,19 @@ my %WriteMakefileArgs = (
 
 
 my %FallbackPrereqs = (
+  "Badge::Depot" => 0,
+  "DateTime" => 0,
+  "DateTime::Format::RFC3339" => 0,
   "ExtUtils::MakeMaker" => 0,
   "File::Spec" => 0,
-  "Test::More" => "0.96"
+  "JSON::MaybeXS" => 0,
+  "Moose" => 0,
+  "MooseX::AttributeShortcuts" => 0,
+  "Path::Tiny" => 0,
+  "Test::More" => "0.96",
+  "Types::Standard" => 0,
+  "Types::URI" => 0,
+  "namespace::autoclean" => 0
 );
 
 

@@ -1,22 +1,63 @@
 # NAME
 
-Badge::Depot::Plugin::Coverage - Short intro
+Badge::Depot::Plugin::Coverage - Code coverage plugin for Badge::Depot
 
-![Requires Perl unknown](https://img.shields.io/badge/perl-unknown-brightgreen.svg) [![Travis status](https://api.travis-ci.org//.svg?branch=master)](https://travis-ci.org//)
+![Requires Perl 5.10.1+](https://img.shields.io/badge/perl-5.10.1+-brightgreen.svg) [![Travis status](https://api.travis-ci.org/Csson/p5-Badge-Depot-Plugin-Coverage.svg?branch=master)](https://travis-ci.org/Csson/p5-Badge-Depot-Plugin-Coverage)
 
 # VERSION
 
-Version 0.0001, released 2016-01-17.
+Version 0.0001, released 2016-01-18.
 
 # SYNOPSIS
 
+Used standalone:
+
     use Badge::Depot::Plugin::Coverage;
+
+    my $badge = Badge::Depot::Plugin::Coverage->new(coverage => 87);
+
+    print $badge->to_html;
+
+Used together with [Pod::Weaver::Section::Badges](https://metacpan.org/pod/Pod::Weaver::Section::Badges), in weaver.ini:
+
+    [Badges]
+    ; other settings
+    badge = Coverage
 
 # DESCRIPTION
 
-Badge::Depot::Plugin::Coverage is ...
+This [Badge::Depot](https://metacpan.org/pod/Badge::Depot) badge is meant to be used together with [Dist::Zilla::App::Command::coverh](https://metacpan.org/pod/Dist::Zilla::App::Command::coverh) (or standalone, as per the synopsis) and creates a coverage badge:
+
+![Coverage 87%](https://img.shields.io/badge/coverage-87%-orange.svg)
+
+# ATTRIBUTES
+
+## coverage
+
+Set the code coverage percentage manually. Should only be used when [Dist::Zilla::App::Command::coverh](https://metacpan.org/pod/Dist::Zilla::App::Command::coverh) is **not** used.
+
+## custom\_image\_url
+
+Default: `https://img.shields.io/badge/%s-%s-%s.svg`
+
+Override the default image url. It is expected to have three `sprintf` placeholders: Text, coverage percentage and color.
+
+## max\_age
+
+Default: `60`
+
+When used together with [Dist::Zilla::App::Command::coverh](https://metacpan.org/pod/Dist::Zilla::App::Command::coverh), only include the badge if the latest coverage run was less than `max_age` minutes ago.
+
+## text
+
+Default: `coverage`
+
+Set a different badge text.
 
 # SEE ALSO
+
+- [Badge::Depot](https://metacpan.org/pod/Badge::Depot)
+- [Task::Badge::Depot](https://metacpan.org/pod/Task::Badge::Depot)
 
 # SOURCE
 
