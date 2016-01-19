@@ -10,7 +10,8 @@ use MooseX::AttributeShortcuts;
 use Types::Standard qw/Str Bool Num/;
 use Types::URI qw/Uri/;
 use JSON::MaybeXS 'decode_json';
-use Path::Tiny;use DateTime;
+use Path::Tiny;
+use DateTime;
 use DateTime::Format::RFC3339;
 with 'Badge::Depot';
 

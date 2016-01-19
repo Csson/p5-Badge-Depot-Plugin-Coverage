@@ -6,7 +6,7 @@ Badge::Depot::Plugin::Coverage - Code coverage plugin for Badge::Depot
 
 # VERSION
 
-Version 0.0001, released 2016-01-18.
+Version 0.0001, released 2016-01-19.
 
 # SYNOPSIS
 
