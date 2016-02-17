@@ -18,7 +18,7 @@ with 'Badge::Depot';
 
 # ABSTRACT: Code coverage plugin for Badge::Depot
 # AUTHORITY
-our $VERSION = '0.0101';
+our $VERSION = '0.0102';
 
 has coverage => (
     is => 'ro',
