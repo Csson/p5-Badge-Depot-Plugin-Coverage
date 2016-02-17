@@ -2,11 +2,9 @@
 
 Badge::Depot::Plugin::Coverage - Code coverage plugin for Badge::Depot
 
-![Requires Perl 5.10.1+](https://img.shields.io/badge/perl-5.10.1+-brightgreen.svg) [![Travis status](https://api.travis-ci.org/Csson/p5-Badge-Depot-Plugin-Coverage.svg?branch=master)](https://travis-ci.org/Csson/p5-Badge-Depot-Plugin-Coverage)
-
 # VERSION
 
-Version 0.0001, released 2016-01-19.
+Version 0.0101, released 2016-02-17.
 
 # SYNOPSIS
 

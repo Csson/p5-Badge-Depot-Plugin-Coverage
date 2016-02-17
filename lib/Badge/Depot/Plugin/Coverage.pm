@@ -1,6 +1,7 @@
-use 5.10.1;
+use 5.10.0;
 use strict;
 use warnings;
+use feature qw/say/;
 
 package Badge::Depot::Plugin::Coverage;
 
@@ -15,8 +16,9 @@ use DateTime;
 use DateTime::Format::RFC3339;
 with 'Badge::Depot';
 
-# VERSION
 # ABSTRACT: Code coverage plugin for Badge::Depot
+# AUTHORITY
+our $VERSION = '0.0101';
 
 has coverage => (
     is => 'ro',

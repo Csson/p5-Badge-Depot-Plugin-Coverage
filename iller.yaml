@@ -15,7 +15,7 @@ header:
 prereqs:
   runtime:
     requires:
-      - perl: 5.010001
+      - perl: 5.010000
       - Moose
       - namespace::autoclean
       - MooseX::AttributeShortcuts
@@ -35,3 +35,7 @@ doctype: weaver
 
 plugins:
   - +config: Author::CSSON
+    badges: 0
+
+---
+doctype: cpanfile
