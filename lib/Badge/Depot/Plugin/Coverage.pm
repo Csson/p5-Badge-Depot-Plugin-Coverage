@@ -56,7 +56,7 @@ sub BUILD {
 
     $coverage = sprintf '%.1f', $coverage;
     my $color = $self->determine_color($coverage);
-    $self->image_url(sprintf $self->custom_image_url, $self->text, $coverage.'%', $color);
+    $self->image_url(sprintf $self->custom_image_url, $self->text, $coverage.'%25', $color);
     $self->image_alt(sprintf '%s %s', $self->text, $coverage.'%');
     $self->log("Adds coverage badge ($coverage%)");
 }
@@ -144,9 +144,9 @@ Used together with L<Pod::Weaver::Section::Badges>, in weaver.ini:
 
 This L<Badge::Depot> badge is meant to be used together with L<Dist::Zilla::App::Command::coverh> (or standalone, as per the synopsis) and creates a coverage badge:
 
-=for HTML <p><img src="https://img.shields.io/badge/coverage-87%-orange.svg" /></p>
+=for HTML <p><img src="https://img.shields.io/badge/coverage-87%25-orange.svg" /></p>
 
-=for markdown ![Coverage 87%](https://img.shields.io/badge/coverage-87%-orange.svg)
+=for markdown ![Coverage 87%](https://img.shields.io/badge/coverage-87%25-orange.svg)
 
 =head1 ATTRIBUTES
 
@@ -170,7 +170,7 @@ When used together with L<Dist::Zilla::App::Command::coverh>, only include the b
 
 Default: C<coverage>
 
-Set a different badge text.
+Set a different coverage percentage. The percentage sign will be appended.
 
 =head1 SEE ALSO
 
