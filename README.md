@@ -4,7 +4,7 @@ Badge::Depot::Plugin::Coverage - Code coverage plugin for Badge::Depot
 
 # VERSION
 
-Version 0.0101, released 2016-02-17.
+Version 0.0102, released 2020-12-26.
 
 # SYNOPSIS
 
@@ -26,7 +26,7 @@ Used together with [Pod::Weaver::Section::Badges](https://metacpan.org/pod/Pod::
 
 This [Badge::Depot](https://metacpan.org/pod/Badge::Depot) badge is meant to be used together with [Dist::Zilla::App::Command::coverh](https://metacpan.org/pod/Dist::Zilla::App::Command::coverh) (or standalone, as per the synopsis) and creates a coverage badge:
 
-![Coverage 87%](https://img.shields.io/badge/coverage-87%-orange.svg)
+![Coverage 87%](https://img.shields.io/badge/coverage-87%25-orange.svg)
 
 # ATTRIBUTES
 
@@ -50,7 +50,7 @@ When used together with [Dist::Zilla::App::Command::coverh](https://metacpan.org
 
 Default: `coverage`
 
-Set a different badge text.
+Set a different coverage percentage. The percentage sign will be appended.
 
 # SEE ALSO
 

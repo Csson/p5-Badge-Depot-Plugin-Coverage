@@ -4,6 +4,7 @@ Revision history for Badge-Depot-Plugin-Coverage
  [API Changes]
 
  [Bug Fixes]
+ - Url-encode the percentage sign
 
  [Documentation]
 
